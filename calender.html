@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar and Clock</title>
+    <link rel="stylesheet" href="./CSS/calender.css">
+</head>
+<body>
+
+    <div class="app">
+
+   
+        <div class="clock">
+            <h1 id="time"></h1>
+            <p id="fullDate"></p>
+        </div>
+
+       
+        <div class="card">
+
+            <div class="head">
+                <button onclick="prevMonth()">&lt;</button>
+                <h2 id="monthTitle"></h2>
+                <button onclick="nextMonth()">&gt;</button>
+            </div>
+
+            <div class="grid">
+                <div class="wd">SUN</div>
+                <div class="wd">MON</div>
+                <div class="wd">TUE</div>
+                <div class="wd">WED</div>
+                <div class="wd">THU</div>
+                <div class="wd">FRI</div>
+                <div class="wd">SAT</div>
+            </div>
+
+            <div class="grid" id="days"></div>
+
+            <p class="legend">Ring = today &nbsp; Orange dot = has event</p>
+
+        </div>
+
+
+        <div class="panel">
+            <h3 id="panelTitle">Select a date</h3>
+            <p class="hint">Click a date to view events. Double-click a date to add one.</p>
+            <ul id="eventList"></ul>
+            <button class="add" onclick="addEvent(selectedDay)">+ Add event</button>
+        </div>
+
+    </div>
+
+    <script src="calender.js"></script>
+</body>
+</html>
